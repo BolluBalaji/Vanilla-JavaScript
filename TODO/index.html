@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO APP</title>
+	<link  rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href='style.css'>
+	<script src='main.js'></script>
+</head>
+<body>
+	<form class='container w-50' id='popup'>
+		<hr>
+		<h1>Add an Event/Task</h1>
+		<hr>
+		<span id="error" style="color: red;"></span>
+	    <div class="col">
+	    	<label for="taskname">Task Name</label>
+	      <input type="text" id="taskname" class="form-control" placeholder="Task Name">
+	    </div>
+
+	    <div class="form-group col">
+	      <label for="priority">Task Priority</label>
+	      <select id="priority" class="form-control">
+	        <option selected>Choose...</option>
+	        <option>High</option>
+	        <option>Medium</option>
+	        <option>Low</option>
+	      </select><br>
+	    </div>
+	  <button type="submit" class="btn btn-success ml-5" onclick="addItem()">Create</button>
+	  <button type="submit" class="btn btn-danger ml-5" id="can" onclick="closepopup()">Cancel</button><br><br>
+	</form>
+	<div id="body">
+		<div class="container card w-75 mt-4" align="center">
+			<h3>List of ToDos!</h3>
+		</div>
+
+		<div class="container">
+			<ul class="list-group" id='allitems'>
+			</ul>
+			<hr>
+			<button class="btn btn-success" id='open' onclick="addpopup();">Add TODO</button>
+		</div>
+	</div>
+</body>
+</html>
